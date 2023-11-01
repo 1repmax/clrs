@@ -1,4 +1,4 @@
-package org.rboys.sorting;
+package org.rboys.sorting.impl;
 
 /**
  * @author BitDisciple on 11/1/2023
