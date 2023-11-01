@@ -4,6 +4,7 @@ import org.rboys.adding.impl.BinaryIntegersAnother;
 import org.rboys.adding.impl.BinaryIntegersOwn;
 import org.rboys.searching.impl.LinearSearch;
 import org.rboys.sorting.impl.InsertionSort;
+import org.rboys.sorting.impl.SelectionSort;
 import org.rboys.sorting.impl.SortingMode;
 
 import java.util.Arrays;
@@ -14,7 +15,7 @@ import java.util.Arrays;
 public class Runner {
 
     public static void main(String[] args) {
-        binaryAddTest();
+        sortTest();
     }
 
     private static void sortTest() {
@@ -22,7 +23,7 @@ public class Runner {
         System.out.println("Before sort: " + Arrays.toString(nums1));
         new InsertionSort()
                 .sort(nums1, SortingMode.ASCENDING);
-        System.out.println("Ascending sort: " + Arrays.toString(nums1));
+        System.out.println("Ascending insertion sort: " + Arrays.toString(nums1));
 
         System.out.println();
 
@@ -30,7 +31,16 @@ public class Runner {
         System.out.println("Before sort: " + Arrays.toString(nums2));
         new InsertionSort()
                 .sort(nums2, SortingMode.DESCENDING);
-        System.out.println("Descending sort: " + Arrays.toString(nums2));
+        System.out.println("Descending insertion sort: " + Arrays.toString(nums2));
+
+        System.out.println();
+
+        int[] nums3 = {5, 2, 4, 6, 1, 3};
+        System.out.println("Before sort: " + Arrays.toString(nums3));
+        new SelectionSort()
+                .sort(nums2, SortingMode.DESCENDING);
+        System.out.println("Descending selection sort: " + Arrays.toString(nums2));
+
     }
 
     private static void searchTest() {
