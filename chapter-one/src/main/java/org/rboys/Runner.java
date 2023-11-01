@@ -1,5 +1,7 @@
 package org.rboys;
 
+import org.rboys.adding.impl.BinaryIntegersAnother;
+import org.rboys.adding.impl.BinaryIntegersOwn;
 import org.rboys.searching.impl.LinearSearch;
 import org.rboys.sorting.impl.InsertionSort;
 import org.rboys.sorting.impl.SortingMode;
@@ -12,7 +14,7 @@ import java.util.Arrays;
 public class Runner {
 
     public static void main(String[] args) {
-        searchTest();
+        binaryAddTest();
     }
 
     private static void sortTest() {
@@ -40,5 +42,14 @@ public class Runner {
         System.out.println(new LinearSearch()
                 .search(nums, 7)
         );
+    }
+
+    private static void binaryAddTest() {
+        int[] a = {0, 1, 1, 1};
+        int[] b = {0, 0, 0, 1};
+        int[] add1 = new BinaryIntegersOwn().add(a, b);
+        int[] add2 = new BinaryIntegersAnother().add(a, b);
+        System.out.println(Arrays.toString(add1));
+        System.out.println(Arrays.toString(add2));
     }
 }
